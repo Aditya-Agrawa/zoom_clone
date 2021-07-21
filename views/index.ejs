@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>
+
+
+    </title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.2/peerjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="/javascripts/room.js" defer></script>
+
+    <script>
+        const ROOMID = "<%=rId%>";
+    </script>
+</head>
+
+<body>
+
+    <div id='main'>
+        <div id='left'>
+            <div id='main_video'>
+                <div id='video-elememt'>
+
+                </div>
+            </div>
+            <div class='controls'>
+                <div class='main_control_block'>
+                    <div onclick="muteUnmute()" class='main-control-btn main__mute_button'>
+                        <i class="fas fa-microphone"></i>
+                        <span>Mute</span>
+                    </div>
+
+                    <div onclick="playStop()" class='main-control-btn  main__video_button'>
+                        <i class="fas fa-video"></i>
+                        <span>stop video</span>
+                    </div>
+                </div>
+                <div class="main_control_block">
+                    <div class="main-control-btn">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Security</span>
+                    </div>
+                    <div class="main-control-btn">
+                        <i class="fas fa-user-friends"></i>
+                        <span>Participants</span>
+                    </div>
+                    <div class="main-control-btn">
+                        <i class="fas fa-comment-alt"></i>
+                        <span>Chat</span>
+                    </div>
+                </div>
+                <div class="main_control_block">
+                    <div class="main-control-btn">
+                        <span class="leave_meeting">Leave Meeting</span>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+        <div id='right'>
+            <div id='header'>
+                <h6>
+                    chat
+                </h6>
+
+            </div>
+            <div class="main__chat_window">
+                <ul class="messages">
+
+                </ul>
+
+            </div>
+            <div class="main__message_container">
+                <input id="chat_message" type="text" placeholder="Type message here...">
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+
+</html>

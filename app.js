@@ -16,7 +16,7 @@ var options = {
 app.use('/peerjs', ExpressPeerServer(server, options));
 //const server = http.createServer(app);
 var io = require('socket.io')(server);
-server.listen(5000);
+server.listen(process.env.PORT || 5000);
 
 io.on('connection', socket => {
 

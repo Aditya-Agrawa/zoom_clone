@@ -51,7 +51,7 @@ const scrollToBottom = () => {
 var peer = new Peer(undefined, {
     path: '/peerjs',
     host: '/',
-    port: '5000'
+    port: '443'
 });
 peer.on('open', id => {
     //  console.log(id, "hello");
